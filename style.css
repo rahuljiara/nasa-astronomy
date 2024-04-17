@@ -1,0 +1,341 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    color: white;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+
+}
+
+
+/* ------------------------------------NAV BAR -------------------------------------- */
+
+.menu {
+    display: none;
+}
+
+#menu-icon {
+    height: 40px;
+}
+
+.container .navbar {
+    height: 50px;
+    width: 98%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.container .navbar .nav-logo {
+    line-height: 22px;
+}
+
+.container .navbar .nav-logo .nav-logo-brand {
+    font-size: 30px;
+    letter-spacing: 11px;
+}
+
+.container .navbar .nav-logo .nav-logo-title {
+    letter-spacing: 5px;
+}
+
+.container .navbar .nav-links {
+    gap: 10px;
+}
+
+.nav-link-box {
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.508);
+    backdrop-filter: blur(4px);
+    padding: 2px;
+    border-radius: 50px;
+    padding-right: 10px;
+}
+
+.nav-link-box img {
+    width: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link-box:hover {
+    box-shadow: 1px 1px 5px white;
+    background: black;
+    border-left: 1px solid rgba(255, 255, 255, 0.53);
+    border-top: 1px solid rgba(255, 255, 255, 0.53);
+}
+
+
+
+
+/* ------------------------------------Home-------------------------------------- */
+
+.container .home {
+    height: calc(100vh - 100px);
+    width: 100%;
+    ;
+    flex-direction: column;
+}
+
+.container .home .home-title {
+    position: relative;
+    height: 70px;
+    width: 800px;
+    border-radius: 10px;
+    background-color: rgba(0, 72, 145, 0.168);
+    backdrop-filter: blur(5px);
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container .home .home-title .copy-text {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background: black;
+    border-radius: 50%;
+}
+
+.container .home .home-title .copy-text img {
+    height: 30px;
+}
+
+.container .home .home-description {
+
+    height: 350px;
+    width: 800px;
+    border-radius: 10px;
+    margin-top: 25px;
+    background-color: rgba(0, 64, 116, 0.168);
+    backdrop-filter: blur(5px);
+
+
+}
+
+
+.container .home .home-description textarea {
+
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 1% 2%;
+    resize: none;
+    margin: auto;
+    resize: none;
+    background-color: transparent;
+    border: 0;
+    font-size: 16px;
+    color: white;
+    text-align: justify;
+
+}
+
+
+
+
+/* ------------------------------------Footer-------------------------------------- */
+.container .footer {
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container .footer .left-footer {
+    height: 100%;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5px;
+
+}
+
+.container .footer .left-footer img {
+    height: 30px;
+    width: 30px;
+    filter: grayscale(1);
+    opacity: .5;
+    transition: 1s;
+
+}
+
+.container .footer .left-footer img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transition: .2s;
+}
+
+.container .footer .right-footer {
+    gap: 10px;
+    margin-right: 10px;
+}
+
+
+
+@media screen and (max-width:800px) {
+
+    .container .home .home-title,
+    .container .home .home-description {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .container .home .home-title,
+    .container .home .home-description {
+        width: 98%;
+    }
+
+    .menu {
+        display: flex;
+        /* position: absolute;
+        right:0;
+        top:0; */
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .container .navbar .nav-links {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.817);
+        backdrop-filter: blur(2px);
+        z-index: 100;
+        overflow: hidden;
+        }
+
+    .container .navbar {
+        width: 100%;
+        background-color: white;
+    }
+
+    .container .navbar .nav-logo {
+        color: rgb(0, 0, 0);
+        margin-left: 10px;
+    }
+
+    .nav-links a {
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-link-box {
+        padding: 2px;
+        border-radius: 50px;
+        padding-right: 10px;
+        height: 50px;
+        width: 90%;
+        margin: auto;
+        backdrop-filter: blur(0);
+        font-size: 18px;
+    }
+
+
+    .container .home .home-title{
+        font-size: 22px;
+        width:98%;
+        margin: auto;
+        
+    }
+    .container .home .home-description {
+        height: 70%;
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width:400px){
+    .container .home .home-title{
+       justify-content: left;
+       margin-left:10px;
+        
+    }
+    #title{
+       margin-left:10px;
+        
+    }
+    .container .home .home-title .copy-text {
+        height: 35px;
+        width: 35px;
+    }
+    
+    .container .home .home-title .copy-text img {
+        height: 25px;
+    }
+}
+@media screen and (max-width:300px){
+    body{
+        overflow: auto;
+        height:fit-content;
+    }
+    #title{
+       margin-left:5px; 
+    }
+    .container .home .home-title .copy-text {
+        height: 30px;
+        width: 30px;
+    }
+    
+    .container .home .home-title .copy-text img {
+        height: 20px;
+    }
+    .container .home .home-title{
+        font-size: 16px; 
+        width:100%; 
+        margin:0;
+    }
+    .container .home .home-description{
+        height:100%;
+    }
+    .container .footer{
+        flex-direction: column;
+        height:fit-content;
+        padding:10px 0;
+        flex-basis: auto;
+    }
+    .container .footer .right-footer{
+        flex-direction: column;
+        order:1;
+        margin: 0;
+    }
+    
+}
+
+@media screen and (max-height:550px){
+    body{
+        overflow: auto;
+    }
+}
+@media screen and (max-width:225px){
+    body{
+        display: none;
+        background-color: black;;
+    }
+}

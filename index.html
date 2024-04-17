@@ -1,0 +1,83 @@
+<!-- 
+    API Image       -> https://cdn-icons-png.flaticon.com/128/627/627558.png
+    Menu Icon       -> https://cdn-icons-png.flaticon.com/128/627/627558.png
+
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA - Astronomy Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar flex">
+            <div class="nav-logo">
+                <div class="nav-logo-brand">NASA</div>
+                <div class="nav-logo-title">Astronomy</div>
+            </div>
+            <div class="nav-links flex" id="links">
+                <a id="img-download" download target="_blank">
+                    <div class="nav-link-box flex"><img src="img/download.png" alt=""> Download Image</div>
+                </a>
+
+                <a href="https://api.nasa.gov/" target="_blank">
+                    <div class="nav-link-box flex"><img src="img/api.png">Go To API</div>
+                </a>
+
+                <a href="https://github.com/rahuljiara/nasa-astronomy" target="_blank">
+                    <div class="nav-link-box flex"><img src="img/download.png" alt="">Download Code</div>
+                </a>
+            </div>
+            <div class="menu flex">
+                <img src="img/burger-bar.png" id="menu-icon">
+            </div>
+        </div>
+
+        <!-- home -->
+        <div class="home flex">
+            <div class="home-title flex">
+                <div id="title"></div>
+                <div class="copy-text flex">
+                    <img id="copy">
+                </div>
+            </div>
+            <div class="home-description flex">
+                <textarea name="description" id="main-text" readonly class="flex"></textarea>
+            </div>
+
+        </div>
+
+        <!-- footer -->
+        <div class="footer flex">
+            <div class="left-footer flex">
+                <a href="https://facebook.com/rahuljiara" target="_blank"><img src="img/facebook.png"></a>
+                <a href="https://instagram.com/rahuljiaraofficial" target="_blank"><img src="img/instagram.png"></a>
+                <a href="https://github.com/rahuljiara" target="_blank"><img src="img/github.png"></a>
+            </div>
+            <div class="right-footer flex">
+                <div id="date"> </div>
+                <div id="time"> </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
